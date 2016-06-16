@@ -52,11 +52,27 @@ namespace CentralNNApp.Models
 
         public int? Diet { get; set; }
 
+        public bool DietBoolean
+        {
+            get { return Diet != 0; }
+            set { Diet = value ? 1 : 0; }
+        }
+
         public int? GovAssit { get; set; }
 
         public int? Income { get; set; }
 
         public int? Education { get; set; }
+
+        public int? SafeHome { get; set; }
+
+        public int? SafeNeighborhood { get; set; }
+
+        public int? Transportation { get; set; }
+
+        public int? HomeInternet { get; set; }
+
+        public int? MobileInternet { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Intervention> Interventions { get; set; }
